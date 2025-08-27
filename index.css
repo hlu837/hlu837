@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 195 100% 85%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 195 71% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 193 100% 67%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 5%;
+
+    --radius: 0.5rem;
+
+    /* Poetry site specific design tokens */
+    --poetry-mint: 195 100% 85%;
+    --poetry-blue-light: 202 87% 69%;
+    --poetry-blue: 217 69% 66%;
+    --poetry-teal: 178 100% 68%;
+    --poetry-purple: 321 47% 67%;
+    --poetry-content-bg: 0 0% 96%;
+    
+    /* Beautiful gradients */
+    --gradient-header: linear-gradient(90deg, hsl(202, 87%, 69%, 0.82) 1%, hsl(217, 69%, 66%) 50%, hsl(178, 100%, 68%, 0.71) 63%, hsl(202, 69%, 73%) 100%);
+    --gradient-profile: linear-gradient(293deg, hsl(178, 100%, 68%) 0%, hsl(217, 69%, 73%) 50%, hsl(321, 47%, 67%) 100%);
+    --gradient-welcome: linear-gradient(180deg, hsl(202, 100%, 75%, 0.4) 0%, hsl(217, 69%, 66%, 0.71) 100%);
+    --gradient-footer: linear-gradient(90deg, hsl(202, 87%, 69%, 0.82) 1%, hsl(217, 69%, 66%) 50%, hsl(178, 100%, 68%, 0.71) 63%, hsl(202, 69%, 73%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --shadow-elegant: 0 8px 25px -8px rgba(0, 0, 0, 0.15);
+    
+    /* Typography */
+    --font-island: 'Island Moments', cursive;
+    --font-just-me: 'Just Me Again Down Here', cursive;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 213 27% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, sans-serif;
+  }
+
+  .gradient-header {
+    background: var(--gradient-header);
+  }
+
+  .gradient-profile {
+    background: var(--gradient-profile);
+  }
+
+  .gradient-welcome {
+    background: var(--gradient-welcome);
+  }
+
+  .gradient-footer {
+    background: var(--gradient-footer);
+  }
+
+  .font-island {
+    font-family: var(--font-island);
+  }
+
+  .font-just-me {
+    font-family: var(--font-just-me);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
